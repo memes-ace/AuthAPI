@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: AuthAPI
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DB_URI
+        fromDatabase: false
+      - key: JWT_SECRET
+        fromDatabase: false
+      - key: PORT
+        fromDatabase: false
